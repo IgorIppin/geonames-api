@@ -1,0 +1,2 @@
+CREATE DATABASE master;
+CREATE DATABASE detail;
