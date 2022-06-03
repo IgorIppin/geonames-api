@@ -4,7 +4,7 @@ from sqlalchemy import Column, String, Integer, ForeignKey
 Base = declarative_base()
 
 
-class Master(Base):
+class User(Base):
     __tablename__ = 'master'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -15,6 +15,6 @@ class Detail(Base):
     __tablename__ = 'detail'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    user = Column(Integer, ForeignKey('game.user'))
+    user = Column(Integer, ForeignKey('master.user'))
     zip_code = Column(String)
     city = Column(String)

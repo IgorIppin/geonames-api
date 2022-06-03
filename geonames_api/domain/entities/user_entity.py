@@ -11,7 +11,7 @@ class User(BaseModel):
         schema_extra: dict = {
             'examples': [
                 {
-                    'name': "Igor"
+                    'name': "Ingvar"
                 }
             ]
         }

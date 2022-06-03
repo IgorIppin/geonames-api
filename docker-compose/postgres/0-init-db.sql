@@ -1,2 +1,1 @@
-CREATE DATABASE master;
-CREATE DATABASE detail;
+CREATE DATABASE geonames;

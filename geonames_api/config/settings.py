@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     api_prefix: str
 
     class Config:
-        env_file = ".env"
+        env_file = ".env.example"
 
 
 config = Settings()

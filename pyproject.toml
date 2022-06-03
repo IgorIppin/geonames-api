@@ -11,6 +11,10 @@ fastapi = "^0.78.0"
 bump2version = "^1.0.1"
 httpx = "^0.23.0"
 SQLAlchemy = "^1.4.37"
+uvicorn = "^0.17.6"
+python-dotenv = "^0.20.0"
+psycopg2-binary = "^2.9.3"
+alembic = "^1.8.0"
 
 [tool.poetry.dev-dependencies]
 

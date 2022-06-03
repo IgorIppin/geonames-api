@@ -1,7 +1,7 @@
 version: "3.1"
 
 services:
-  db:
+  db_geonames:
     build:
       context: ../
       dockerfile: docker-compose/postgres/Dockerfile
@@ -12,25 +12,24 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres:/var/lib/postgresql/data
+      - postgres_geonames:/var/lib/postgresql/data
   app:
     restart: unless-stopped
     build:
       context: ../
       dockerfile: docker-compose/app/Dockerfile
-    entrypoint: /bin/bash docker-compose/app/app_entrypoint.sh
     env_file:
-      - ../.env
+      - ../.env.example
     links:
-      - db:db
+      - db_geonames:db_geonames
     expose:
       - "5000"
     ports:
       - "5000:5000"
     depends_on:
-      - db
+      - db_geonames
     volumes:
       - ../:/app
 
 volumes:
-  postgres:
+  postgres_geonames:

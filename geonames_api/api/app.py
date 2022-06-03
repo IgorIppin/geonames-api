@@ -4,10 +4,8 @@ import uvicorn
 from geonames_api.config.settings import config
 from geonames_api.api.v1.router import v1_router
 
-from geonames_api.version import VERSION
-
 app = FastAPI(
-    version=VERSION,
+    version="0.1.0",
     title=config.app_name,
     openapi_url=f'{config.api_prefix}/openapi.json')
 

@@ -14,7 +14,7 @@ RUN apt-get update && \
     mkdir $APP_HOME && useradd -m -s $(which bash) python && \
     chown -R python $APP_HOME
 
-ADD ../.. $APP_HOME
+ADD . $APP_HOME
 WORKDIR $APP_HOME
 
 RUN python3 -m pip install --upgrade pip && \
@@ -25,4 +25,4 @@ RUN python3 -m pip install --upgrade pip && \
 EXPOSE 5000
 USER python
 
-CMD ["uvicorn", "geoname_api.api.app:app", "--host", "0.0.0.0", "--port", "5000", "--workers", "1"]
+CMD ["uvicorn", "geonames_api.api.app:app", "--host", "0.0.0.0", "--port", "5000", "--workers", "1"]
