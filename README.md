@@ -12,11 +12,11 @@ Clean architecture was created by Robert C. Martin and promoted on his blog, Unc
 
 pip install docker-compose
 
-docker-compose -f docker-compose/docker-compose.yaml  up
+docker-compose -f docker-compose/docker-compose.yml  up
 
 ## Swagger Documentation
 
-http://0.0.0.0/docs
+http://0.0.0.0:5000/docs
 
 ### APIs 
 
